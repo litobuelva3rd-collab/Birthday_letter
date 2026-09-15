@@ -17,37 +17,14 @@ body {
 }
 
 
+
 /* =========================
    HOME SCREEN
 ========================= */
 
 #home {
-  min-height: 100vh;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-}
-
-#home h1 {
-  font-size: 55px;
-  color: #ff4d6d;
-  margin-bottom: 10px;
-}
-
-
-#home p {
-  color: #777;
-  font-size: 20px;
-  margin-bottom: 35px;
-}
-
-#home {
-    width: 55%;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
 
     display: flex;
     flex-direction: column;
@@ -55,61 +32,124 @@ body {
     align-items: center;
 
     text-align: center;
+
+    padding: 20px;
+}
+
+#home h1 {
+    font-size: 55px;
+    color: #ff4d6d;
+    margin: 0 0 10px;
+    max-width: 90%;
+}
+
+#home p {
+    color: #777;
+    font-size: 20px;
+    margin: 0 0 35px;
+    max-width: 90%;
 }
 
 /* Gift */
 
 .gift {
-  font-size: 100px;
-
-  animation: bounce 1.5s infinite;
-
-  margin-bottom: 20px;
+    font-size: 100px;
+    animation: bounce 1.5s infinite;
+    margin-bottom: 20px;
 }
 
 @keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
 
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-15px);
-  }
-
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 
-
-/* Open Button */
+/* =========================
+   OPEN BUTTON
+========================= */
 
 .open-button {
-  border: none;
+    border: none;
 
-  padding: 18px 35px;
+    padding: 18px 35px;
 
-  border-radius: 40px;
+    border-radius: 40px;
 
-  background: #ff6f91;
+    background: #ff6f91;
 
-  color: white;
+    color: white;
 
-  font-size: 20px;
+    font-size: 20px;
 
-  font-family: Georgia, serif;
+    font-family: Georgia, serif;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  box-shadow:
-    0 8px 20px rgba(255, 111, 145, 0.3);
+    box-shadow:
+        0 8px 20px rgba(255, 111, 145, 0.3);
 
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 .open-button:hover {
-  transform: scale(1.08);
-  background: #ff4d6d;
+    transform: scale(1.08);
+    background: #ff4d6d;
 }
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    #home {
+        width: 100%;
+        min-height: 100vh;
+
+        padding: 20px;
+
+        justify-content: center;
+    }
+
+    #home h1 {
+        font-size: clamp(30px, 9vw, 40px);
+        line-height: 1.2;
+
+        max-width: 100%;
+
+        margin-bottom: 12px;
+    }
+
+    #home p {
+        font-size: 16px;
+        line-height: 1.5;
+
+        max-width: 320px;
+
+        margin-bottom: 28px;
+    }
+
+    .gift {
+        font-size: clamp(65px, 22vw, 90px);
+
+        margin-bottom: 15px;
+    }
+
+    .open-button {
+        font-size: 18px;
+
+        padding: 15px 30px;
+
+        max-width: 90%;
+    }
+}
+
 
 
 /* =========================
@@ -357,13 +397,6 @@ h2 {
   }
 
 }
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
 
   #lockContainer {
     width: 90%;
