@@ -1,0 +1,669 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        135deg,
+        #ffd6e0,
+        #ffeef3
+    );
+
+    font-family: Georgia, serif;
+    overflow-x: hidden;
+}
+
+
+
+/* =========================
+   HOME SCREEN
+========================= */
+
+#home {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+#home h1 {
+
+
+    font-size: 55px;
+    color: #ff4d6d;
+    margin: 0 0 10px;
+    max-width: 90%;
+}
+
+#home p {
+    color: #777;
+    font-size: 20px;
+    margin: 0 0 35px;
+    max-width: 90%;
+}
+
+
+
+/* =========================
+   OPEN BUTTON
+========================= */
+
+.open-button {
+    border: none;
+
+    padding: 18px 35px;
+
+    border-radius: 40px;
+
+    background: #ff6f91;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-family: Georgia, serif;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(255, 111, 145, 0.3);
+
+    transition: 0.3s;
+}
+
+.open-button:hover {
+    transform: scale(1.08);
+    background: #ff4d6d;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* =========================
+       HOME PAGE
+    ========================= */
+
+    #home {
+        width: 100%;
+        min-height: 100vh;
+
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        justify-content: flex-start;
+
+        text-align: center;
+    }
+
+    /* TITLE AT TOP */
+
+    #home h1 {
+        
+        width: 100%;
+
+        margin: 5px 0 8px;
+
+        font-size: 28px;
+        line-height: 1.2;
+
+        color: #ff4d6d;
+    }
+
+    /* MESSAGE */
+
+    #home p {
+        width: 100%;
+        max-width: 320px;
+
+        margin: 0;
+
+        font-size: 14px;
+        line-height: 1.4;
+
+        color: #777;
+    }
+
+    /* GIFT */
+
+    .gift {
+        margin-top: 80px;
+
+        font-size: 75px;
+    }
+
+    /* OPEN BUTTON */
+
+    .open-button {
+        font-size: 18px;
+
+        padding: 15px 30px;
+
+        max-width: 90%;
+    }
+
+
+    /* =========================
+       PASSWORD BOX
+    ========================= */
+
+    #lockContainer {
+    position: fixed;
+
+    top: 50%;
+    right: 5%;
+
+    transform: translateY(-50%);
+
+    width: 356px;
+    min-height: 340px;
+
+    padding: 50px 45px;
+
+    background: white;
+    border-radius: 50px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    z-index: 9999;
+
+    display: block;
+}
+
+    #lockContainer .lock-icon {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    #lockContainer h1 {
+        font-size: 30px;
+        line-height: 1.15;
+
+        margin-bottom: 10px;
+    }
+
+    #lockContainer p {
+        font-size: 15px;
+
+        margin-bottom: 18px;
+    }
+
+    #lockContainer input {
+        width: 100%;
+        height: 60px;
+
+        font-size: 24px;
+
+        letter-spacing: 8px;
+    }
+
+    #lockContainer button:not(.close-btn) {
+        width: 100%;
+        height: 50px;
+
+        margin-top: 15px;
+
+        font-size: 18px;
+    }
+
+
+    /* =========================
+       LETTER PAGE
+    ========================= */
+
+    #letterPage {
+        padding: 20px 10px;
+    }
+
+    .paper {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 45px 25px;
+    }
+
+    h2 {
+        font-size: 35px;
+        line-height: 1.2;
+    }
+
+    .top-decoration {
+        font-size: 25px;
+        letter-spacing: 5px;
+    }
+
+    .letter {
+        font-size: 17px;
+        line-height: 1.8;
+    }
+}
+
+
+/* =========================
+   LETTER PAGE
+========================= */
+
+#letterPage {
+  display: none;
+
+  min-height: 100vh;
+
+  padding: 40px 20px;
+
+  justify-content: center;
+}
+
+
+/* Large Paper */
+
+.paper {
+  width: min(850px, 95vw);
+
+  min-height: 1000px;
+
+  background: #fffdf7;
+
+  padding: 70px 80px;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.18);
+
+  position: relative;
+
+  animation: paperAppear 1s ease;
+}
+
+
+@keyframes paperAppear {
+
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================
+   DECORATIONS
+========================= */
+
+.corner {
+  position: absolute;
+  font-size: 35px;
+}
+
+.top-left {
+  top: 20px;
+  left: 25px;
+}
+
+.top-right {
+  top: 20px;
+  right: 25px;
+}
+
+.bottom-left {
+  bottom: 20px;
+  left: 25px;
+}
+
+.bottom-right {
+  bottom: 20px;
+  right: 25px;
+}
+
+
+.top-decoration {
+  text-align: center;
+
+  font-size: 35px;
+
+  letter-spacing: 10px;
+
+  margin-bottom: 20px;
+}
+
+
+/* Title */
+
+h2 {
+  
+
+  text-align: center;
+
+  color: #ff4d6d;
+
+  font-size: 48px;
+
+  margin-bottom: 10px;
+}
+
+
+.subtitle {
+  text-align: center;
+
+  color: #888;
+
+  font-size: 18px;
+
+  margin-bottom: 40px;
+}
+
+
+/* Divider */
+
+.divider {
+  text-align: center;
+
+  color: #ff8fab;
+
+  font-size: 25px;
+
+  margin: 30px 0;
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+  font-size: 20px;
+
+  line-height: 2;
+
+  color: #444;
+}
+
+.letter p {
+  margin-bottom: 25px;
+}
+
+.name {
+  color: #ff4d6d;
+
+  font-weight: bold;
+}
+
+
+/* Signature */
+
+.signature {
+  margin-top: 60px;
+
+  text-align: right;
+
+  font-size: 20px;
+}
+
+.signature span {
+  display: block;
+
+  color: #ff4d6d;
+
+  font-size: 28px;
+
+  font-weight: bold;
+
+  margin-top: 10px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+  display: block;
+
+  margin: 50px auto 0;
+
+  padding: 12px 25px;
+
+  border: none;
+
+  border-radius: 25px;
+
+  background: #ffb3c1;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  background: #ff8fab;
+
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart {
+  position: fixed;
+
+  bottom: -50px;
+
+  pointer-events: none;
+
+  z-index: 10;
+
+  animation: floatUp linear forwards;
+}
+
+
+@keyframes floatUp {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateY(-110vh)
+      rotate(360deg);
+
+    opacity: 0;
+  }
+
+}
+
+
+
+#lockContainer h1 {
+    font-size: 32px;
+}
+
+#lockContainer input {
+    letter-spacing: 8px;
+}
+
+  #home h1 {
+    font-size: 38px;
+  }
+
+  #home p {
+    font-size: 17px;
+  }
+
+  .gift {
+    font-size: 80px;
+  }
+
+  .paper {
+    padding: 45px 25px;
+
+    min-height: 900px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  .letter {
+    font-size: 17px;
+
+    line-height: 1.8;
+  }
+
+
+
+
+
+/* Lock icon */
+
+#lockContainer .lock-icon {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+
+/* Password title */
+
+#lockContainer h1 {
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    color: #111;
+
+    margin: 0 0 10px;
+}
+
+
+/* Description */
+
+#lockContainer p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: #777;
+
+    margin: 0 0 25px;
+}
+
+
+/* Password input */
+
+#lockContainer input {
+    width: 100%;
+    height: 75px;
+
+    padding: 15px;
+
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+
+    text-align: center;
+    letter-spacing: 12px;
+
+    border: 2px solid #ddd;
+    border-radius: 12px;
+
+    outline: none;
+}
+
+#lockContainer input:focus {
+    border-color: #ff77a9;
+}
+
+
+/* Unlock button */
+
+#lockContainer button:not(.close-btn) {
+    width: 100%;
+    height: 55px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #ff70a5;
+    color: white;
+
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+#lockContainer button:not(.close-btn):hover {
+    background: #ff5c98;
+}
+
+
+/* =========================
+   X BUTTON
+========================= */
+
+.close-btn {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: transparent !important;
+
+    color: #ff5c98 !important;
+
+    border: none !important;
+
+    font-size: 32px !important;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* Message */
+
+#message {
+    font-family: Arial, sans-serif;
+
+    margin-top: 15px !important;
+
+    font-size: 16px !important;
+    font-weight: bold;
+}
+
