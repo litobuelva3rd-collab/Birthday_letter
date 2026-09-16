@@ -1,6 +1,4 @@
-/* =========================
-   OPEN LETTER
-========================= */
+/* OPEN LETTER */
 
 function openLetter() {
 
@@ -12,9 +10,7 @@ function openLetter() {
 }
 
 
-/* =========================
-   GO BACK
-========================= */
+/* GO BACK */
 
 function goBack() {
 
@@ -34,9 +30,7 @@ function goBack() {
     document.getElementById("message").textContent = "";
 }
 
-/* =========================
-   CREATE HEART
-========================= */
+/* CREATE HEART */
 
 function createHeart() {
 
@@ -74,9 +68,7 @@ function createHeart() {
 }
 
 
-/* =========================
-   CREATE MANY HEARTS
-========================= */
+/* CREATE MANY HEARTS */
 
 function createManyHearts() {
 
@@ -90,16 +82,12 @@ function createManyHearts() {
 }
 
 
-/* =========================
-   PASSWORD
-========================= */
+/* PASSWORD */
 
 const correctPIN = "0916";
 
 
-/* =========================
-   UNLOCK
-========================= */
+/* UNLOCK */
 
 function unlock() {
 
@@ -148,8 +136,6 @@ function unlock() {
 }
 
 
-/* =========================
-   CLOSE PASSWORD WITH X
-========================= */
+
 
 
