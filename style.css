@@ -18,9 +18,7 @@ body {
 
 
 
-/* =========================
-   HOME SCREEN
-========================= */
+/* HOME SCREEN */
 
 #home {
     width: 100%;
@@ -86,15 +84,11 @@ body {
     background: #ff4d6d;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
-    /* =========================
-       HOME PAGE
-    ========================= */
+/*  HOME PAGE */
 
     #home {
         width: 100%;
@@ -158,9 +152,7 @@ body {
     }
 
 
-    /* =========================
-       PASSWORD BOX
-    ========================= */
+/*  PASSWORD BOX */
 
     #lockContainer {
     position: fixed;
@@ -224,9 +216,7 @@ body {
     }
 
 
-    /* =========================
-       LETTER PAGE
-    ========================= */
+/* LETTER PAGE */
 
     #letterPage {
         padding: 20px 10px;
@@ -257,9 +247,7 @@ body {
 }
 
 
-/* =========================
-   LETTER PAGE
-========================= */
+/* LETTER PAGE */
 
 #letterPage {
   display: none;
@@ -309,9 +297,7 @@ body {
 }
 
 
-/* =========================
-   DECORATIONS
-========================= */
+/* DECORATIONS */
 
 .corner {
   position: absolute;
@@ -389,9 +375,7 @@ h2 {
 }
 
 
-/* =========================
-   LETTER
-========================= */
+/* LETTER */
 
 .letter {
   font-size: 20px;
@@ -435,9 +419,7 @@ h2 {
 }
 
 
-/* =========================
-   BACK BUTTON
-========================= */
+/* BACK BUTTON */
 
 .back-button {
   display: block;
@@ -468,9 +450,7 @@ h2 {
 }
 
 
-/* =========================
-   FLOATING HEARTS
-========================= */
+/* FLOATING HEARTS */
 
 .heart {
   position: fixed;
@@ -627,9 +607,7 @@ h2 {
 }
 
 
-/* =========================
-   X BUTTON
-========================= */
+/* X BUTTON */
 
 .close-btn {
     position: absolute;
